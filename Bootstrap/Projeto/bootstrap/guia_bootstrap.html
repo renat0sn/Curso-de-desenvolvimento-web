@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guia</title>
+</head>
+<body>
+	<!-- -->Formatação de textos <!--
+	class:
+		display-1, display-2, display-3, display-4
+		lead
+		text-monospace
+		font-weight-bold
+		font-weight-normal
+		font-italic
+		text-uppercase, text-lowercase, text-capitalize (Primeiras letras maiúsculas)
+		text-left, text-center, text-right
+		blockquote (citação)
+		bloquote-footer
+		text-truncate (recorta um texto)
+		list-unstyled (tira as bolinhas de tópico)
+		list-inline, list-inline-item
+	tags:
+		<bloquote>
+	-->
+
+	<!-- -->Alinhamentos de textos<!--
+	class:
+		text-justify
+		text-<tela>-<alinhamento>
+		text-sm-left, text-sm-center, text-sm-right
+		(sm, md, lg, xl)
+		d-inline (transforma em inline)
+		d-block (transforma em block)
+		d-inline-block (transforma em inline-block)
+		bg-success (adiciona background ao bloco)
+	-->
+
+	<!-- -->Elementos flutuantes<!--
+	class:
+		float-left, float-right, float-none
+		clearfix (limpa fluxo de floats)
+		fixed-top, fixed-bottom
+		sticky-top (fixa ao topo após encostar)
+	Float responsivo: float-<tela>-<direcao>
+		tela: sm,md,lg,xl
+		direcao: left, right
+	-->
+
+	<!-- -->Cores e backgrounds<!--
+	class:
+		text-primary
+		text-secondary
+		text-success
+		text-info
+		text-warning
+		text-danger
+		text-light
+		text-dark
+		text-white
+		text-black-50 (50% de opacidade)
+		text-white-50 (50% de opcacidade)
+		Todos servem para background, trocando text por bg
+	-->
+
+	<!-- -->Margin e Padding<!--
+	class:
+		mt-X => X=0,1,2,3,4,5; (top)
+		mb-X => X=0,1,2,3,4,5; (bottom)
+		ml-X => X=0,1,2,3,4,5; (left)
+		mr-X => X=0,1,2,3,4,5; (right)
+		mx-X => X=0,1,2,3,4,5; (left e right)
+		my-X => X=0,1,2,3,4,5; (top e bottom)
+		m-X => X=0,1,2,3,4,5; (todos os lados)
+		Todos servem para o padding, trocando m por p
+	-->
+
+	<!-- -->Tamanhos e bordas<!--
+	class:
+	width:
+		w-X => X=25,50,75,100,auto (width de X%)
+	height:
+		h-X => X=25,50,75,100,auto (height de X%)
+	border:
+		border (todos os lados)
+		border-X => X=left,top,right,bottom
+		border-<cor> => cor=primary,secondary,danger,info, etc..
+		border <type> => type=rounded,rounded-top, rounded-bottom,rounded-right,rounded-left,rounded-circle
+	-->
+
+	<!-- -->Media Queries<!--
+	<head>
+		<style type="text/css">
+			
+			@media (min-width: nMin px) and (max-width: nMax px{
+				*formatação desejada para o tamanho de tela*
+			}
+
+			@media (min-width: ...) and ...{
+				....
+			}
+
+		</style>
+	</head>
+	-->
+
+	<!-- -->Botões<!--
+	class:
+		btn (padrão)
+		btn btn-<type> => type=primary,secondary,success,info,warning,danger,light,dark,link
+		btn btn-outline-<type> (com contorno) => type=''''''''''''''
+		btn btn-<tam> => tam=lg,sm (md é default)
+		btn btn-block (ocupa toda largura da página)
+		btn active, btn disabled
+		btn-group, btn-group-vertical
+		dropdown
+		dropdown-toggle, dropdown-menu, dropdown-item
+		dropdown-divider
+	atributo:
+		data-toggle="button" (irá alternar par ativo ao ser clicado)
+		data-toggle="dropdown" (botao que apresenta lista)
+	-->
+
+	<!-- -->Barras de navegação<!--
+	class:
+		navegação{
+			dentro da <ul>: nav, navbar-nav
+			dentro de <nav>: navbar
+			dentro de <li>: nav-item
+			nav-pills (arredonda item 'active')
+			nav-tabs (navegação em abas)
+			navbar-dark, navbar-light
+			navbar-toggler, navbar-toggler-icon (menu hamburguer)
+		}
+		alinhamento{
+			justify-content-center, justify-content-end
+			flex-column
+		}
+	atributo:
+		data-toggle="collapse"
+		data-target="#qualquer-nome"
+		(atributos para preencher o menu responsivo)
+	-->
+
+	<!-- -->Listas<!--
+	class:
+		list-group
+		list-group-item
+		list-group list-group-flush (sem bordas laterais)
+		active
+		list-group-item-<cores> => cores=primary,secondary,danger,success, ... 
+		badge badge-<cores> (para números de e-mails por exemplo)
+		breadcrumb, breadcrumb-item
+	-->
+
+	<!-- -->Formulários<!--
+	tags:
+		<form>
+			<div class="form-group">
+				<label>
+		<small>
+		<select>
+			<option>
+		<textarea>
+	class:
+		form-group
+		form-control
+		form-control-<size> => size=lg,sm
+		form-control-file
+		custom-file, custom-file-input
+		form-text
+		id="range"
+		custom-range
+		form-inline
+	atributo:
+		readonly
+	-->
+
+	<!-- -->Input group<!--
+	class:
+		input-group
+		input-group-text
+		input-group-append, input-group-prepend
+	-->
+
+	<!-- -->Tabelas e paginação<!--
+	tag:
+		<thead> (agrupa cabeçalhos, ñ tem scroll)
+		<tbody> (agrupa conteúdo, tem scroll)
+		<tfoot>  (agrupa rodapé)
+	class:
+		table, table-dark
+		thead-dark
+		table-striped (tabela listrada)
+		table-bordered (bordas em toda tabela)
+		table-borderless
+		table-<cor> => cor=primary,secondary,danger,warning, ...
+		table-sm
+		table-responsive (deve ser em uma div)
+
+		Paginação (dentro de uma <ul>)
+		pagination
+		page-item (dentro de <li>)
+		page-link
+		active
+		justify-content-<X> => X=center,end
+		pagination-<size> => size=sm,lg	
+	-->
+
+	<!-- -->Cards<!--
+	Dica para inserir imagens aleatórias: https://source.unsplash.com/random/500x500
+	class:
+		card, card-body, card-title, card-subtitle, card-text
+		card-img-<Pos> => Pos=top,bottom (arredonda as bordas de top ou bottom)
+		card-img-overlay (imagem sobrescreve conteúdo do card)
+		card-header, card-header-tabs, card-footer
+		card-columns
+	-->
+
+	<!-- -->Jumbotron e alinhamento de imagens<!--
+	class:
+		jumbotron
+		container
+		media, media-body
+	-->
+
+	<!-- -->Sistema e configuração de grid<!--
+	class:
+		row
+		col-<N> => N=número de divisões da página
+		col-sm-<N>
+		col-md-<N>
+		col-lg-<N>
+		col-xl-<N>
+		container-fluid (preenche a pagina horizontalmente)
+		col (largura fixa)
+		col-<Disp> => Disp=sm,md,lg,xl (empilha conteúdos)
+		offset-<Disp>-<Col> => Disp=sm,md,lg,xl | Col=1,2,3,...,12 (desloca conteúdo em colunas)
+	-->
+
+	<!-- -->Classes do flexbox<!--
+	class:
+		d-flex (define um flex container)
+		flex-row
+		flex-column
+		flex-row-reverse
+		justify-content-<Align> => Align=start,center,end,around,between (alinhamento horizontal)
+		align-items-<Align> => Align=start,center,end,baseline,stretch (alinhamento vertical)
+		aling-self-<Align> => Align=start,center,end,baseline,stretch (alinhamento do próprio elemento)
+	-->
+</body>
+</html>
