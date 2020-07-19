@@ -1,0 +1,270 @@
+html,body, #home{
+	height: 100%;
+	overflow-x:hidden;
+}
+
+#conteudo-1{
+	background-color: white;
+	font-size: 16px;
+	padding-top: 45px;
+	padding-bottom: 45px;
+}
+
+#conteudo-2{
+	font-size: 16px;
+	padding-top: 45px;
+	padding-bottom: 20px;
+}
+
+#rodape{
+	background-color: black;
+	position: relative;
+	padding: 35px 0;
+}
+
+body{
+	background: url(../imagens/capa.png),
+				url(../imagens/ruido.png),
+				linear-gradient(50deg,#ff4169,#7c26f8);
+	background-attachment: fixed;
+	font-family: Helvetica,Arial,sans-serif;
+}
+
+.borda{
+	border: 3px solid red;
+}
+nav.background-nav{
+	background: rgba(0,0,0,0.6);
+	padding: 15px 0;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+	color:white;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover{
+	color:#9bf0e1;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: rgba(255,255,255,.2);
+}
+
+/* Capa */
+.capa{
+	text-align: center;
+}
+
+#conteudo-2{
+	text-align: left;
+}
+
+.btn-custom{
+	color:white;
+	border-radius: 500px;
+	-webkit-border-radius:500px;
+	-moz-border-radius:500px;
+	text-transform:uppercase;
+	transition:background 0.4s, color 0.4s;
+	padding: 10px 20px;
+}
+
+.btn-roxo{
+	background: #7c25f8;
+}
+
+.btn-roxo:hover{
+	background: #6207e3;
+	color: white;
+}
+
+.btn-branco{
+	border:2px solid white;
+}
+
+.btn-branco:hover{
+	background-color: white;
+	color: black;
+}
+/* Tipografia */
+h1{
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+	font-size: 5em;
+	color: white;
+}
+
+h5{
+	color: gray;
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+#conteudo-1 .col-md-6 h1{
+	font-weight: 600;
+	font-size: 3.5em;
+	letter-spacing: -0.04em;
+	margin-bottom: 40px;
+	color: #942dcc;
+}
+
+#conteudo-1 .col-md-6 h3{
+	font-weight: 600;
+	font-size: 2.0em;
+	letter-spacing: -0.04em;
+	color: #434345;
+}
+
+#conteudo-2 .col-md-6 h1{
+	font-weight: 600;
+	font-size: 2.7em;
+	margin-bottom: 20px;
+	letter-spacing: -0.04em;
+	color: white;
+}
+
+#conteudo-2 .col-md-6 h3{
+	font-weight: 550;
+	font-size: 1.5em;
+	margin-bottom: 12px;
+	letter-spacing: -0.04em;
+	color: #c6caf5;
+}
+
+#conteudo-2 .col-md-6 p{
+	color:white;
+}
+
+footer .navbar-nav a{
+	color:white;
+	font-size: 0.9em;
+}
+
+footer .navbar-nav a:hover{
+	color:#9bf0e1;
+	text-decoration: none;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+	h1{
+		font-size:3em;
+	}
+	.btn-custom{
+		
+		font-size:1.1em;
+	}
+	#conteudo-1 .col-md-6 h1{
+		font-size: 2.7em;
+		margin-bottom: 0.5em;
+		margin-top: 0.4em;
+		text-align: center;
+	}
+	#conteudo-1 .col-md-6 h3{
+		font-size: 1.71em;
+	}
+	#conteudo-1 .col-md-6 p{
+		font-size: 0.87em;
+	}
+	.logo-rodape{
+		height: 50px;
+		margin-bottom: 20px;
+	}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+	h1{
+		font-size: 3em;
+	}
+	.btn-custom{
+		font-size:1.1em;
+	}
+	#conteudo-1 .col-md-6 h1{
+		font-size: 3em;
+		margin-bottom: 0.5em;
+		margin-top: 0.4em;
+		text-align: center;
+	}
+	#conteudo-1 .col-md-6 h3{
+		font-size: 1.71em;
+		text-align: center;
+	}
+	#conteudo-1 .col-md-6 p{
+		font-size: 0.87em;
+		text-align:center;
+	}
+	.logo-rodape{
+		height: 50px;
+		margin-bottom: 20px;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+	h1{
+		font-size: 3em;
+	}
+	#conteudo-1 .col-md-6 h1{
+		font-size: 1.9em;
+		margin-bottom: 5px;
+	}
+	#conteudo-1 .col-md-6 h3{
+		font-size: 1.2em;
+	}
+	#conteudo-1 .col-md-6 p{
+		font-size: 0.8em;
+	}
+	.rotacionar{
+		transform: rotate(0deg);
+	}
+	.img-responsiva{
+		height: 460px;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	h1{
+		font-size: 4em;
+	}
+	#conteudo-1 .col-md-6 h1{
+		font-size: 3em;
+		margin-bottom: 25px;
+	}
+	#conteudo-1 .col-md-6 h3{
+		font-size: 1.71em;
+	}
+	#conteudo-1 .col-md-6 p{
+		font-size: 0.87em;
+		margin-bottom: 1.7em;
+	}
+	.rotacionar{
+		-ms-transform: rotate(20deg);
+		-webkit-transform: rotate(20deg);
+		transform: rotate(20deg);
+	}
+	.img-responsiva{
+		height: 550px;
+		position: relative;
+		bottom: 40px;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+	#conteudo-1 .col-md-6 p{
+		margin-bottom: 1.7em;
+	}
+	.img-responsiva{
+		height: 600px;
+		position: relative;
+		bottom: 40px;
+	}
+	.rotacionar{
+		-ms-transform: rotate(24deg);
+		-webkit-transform: rotate(24deg);
+		transform: rotate(24deg);
+	}
+}
