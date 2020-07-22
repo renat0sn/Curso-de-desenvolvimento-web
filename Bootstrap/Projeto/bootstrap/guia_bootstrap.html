@@ -130,7 +130,7 @@
 			nav-tabs (navegação em abas)
 			navbar-dark, navbar-light
 			navbar-toggler, navbar-toggler-icon (menu hamburguer)
-			collapse
+			collapse navbar-collapse
 		}
 		alinhamento{
 			justify-content-center, justify-content-end
@@ -247,6 +247,26 @@
 		justify-content-<Align> => Align=start,center,end,around,between (alinhamento horizontal)
 		align-items-<Align> => Align=start,center,end,baseline,stretch (alinhamento vertical)
 		aling-self-<Align> => Align=start,center,end,baseline,stretch (alinhamento do próprio elemento)
+	-->
+
+	<!-- -->Carousel<!--
+	atributos:
+		data-ride="carousel" (sem controle)
+		data-slide="prev"
+		id="nomeID" (identificador do carousel) 
+	class:
+		carousel slide
+		carousel-inner (dentro de carousel slide)
+		carousel-item active(dentro de caroulsel-inner)
+
+		carousel-control-prev(next) (classe de <a>)
+		carousel-control-prev(next)-icon (dentro de <a>)
+
+		(Indicadores):
+		<ol class="carousel-indicators">
+			<li data-target="#nomeID" data-slide-to="0">
+
+		carousel-caption (legenda)
 	-->
 </body>
 </html>

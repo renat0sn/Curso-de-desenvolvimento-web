@@ -1,0 +1,85 @@
+<!-- -->Importando JavaScript em HTML5 <!--
+	<script type="text/javascript">
+		(código javascript)
+	</script> (diretamente no arquivo HTML5)
+
+	OU 
+
+	<script language="javascript" src="meu_javascript.js"></script> (arquivo externo)
+-->
+
+<!-- -->Variáveis/arrays <!--
+	(Variáveis)
+	var X = 'teste';
+	var Y = 10;
+	document.write(X + Y);
+
+	(Arrays)
+	var lista = Array();
+	lista[1] = 'item 1';
+	lista[2] = 'item 2';
+	lista[3] = 'item 3';
+	OU
+	var lista = Array('item 1', 'item 2', 'item 3');  (aqui o indice começa em 0)
+	OU
+	var lista = ['item 1', 'item 2', 'item 3'];  (aqui o indice começa em 0)
+
+	(Casting)
+	var num = '15';
+	num = parse<Type>(num); => Type = Int,Float
+-->
+
+<!-- -->If/Else<!--
+	==	igual
+	===	igual e mesmo tipo
+	!=	diferente
+	!--	nao identico
+	<, >, <=, >=	menor ou maior (igual)
+
+	&&	e
+	||	ou
+	!	negação
+
+	(Switch/Case) -> igual em C
+-->
+
+<!-- -->Repetição <!--
+	Igual em C (while, do/while, for)
+
+	var x=1; 
+	while (x < 5) {
+		document.write(x + '<br />');
+		x++;
+	}
+
+	comando continue: retorna a próxima iteração do while descartando as instruções abaixo dela
+
+	for(var x = 1; x < 11; x++){
+		...
+	}
+-->
+
+<!-- -->Funções<!--
+	function nomeFuncao (parametro1, parametro2){
+		...
+		(return x);
+	}
+
+	Pode ser chamada antes ou depois de sua declaração!
+-->
+
+<!-- -->Eventos<!--
+	Como utilizar: <div NomeDoEvento="NomeDaFunção()"></div>
+
+	MOUSE:
+	onclick (clique simples)
+	ondblclick (clique duplo)
+	onmousedown (clique simples -> clicando ou soltando)
+	onmouseover (cursor sobrepõe algum elemento da página)
+	onmouseout (cursor sai da área de algum elemento da página)
+
+	TECLADO:
+	onkeydown (tecla pressionada)
+	onkeypress (tecla pressionada : não captura alt, ctrl, esc, shift, etc)
+	onkeyup (tecla liberada)
+-->
