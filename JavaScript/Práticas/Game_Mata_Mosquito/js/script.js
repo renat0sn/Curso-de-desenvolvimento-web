@@ -84,9 +84,9 @@ function cronometro(){
 		document.getElementById('segundos').innerHTML = tempoDeJogo;
 		tempoDeJogo++;
 		if(tempoDeJogo > 100 && fimDeJogo == false){ 
+			fimDeJogo = true;
 			clearInterval(x);
 			telaVitoria();
-			fimDeJogo = true;
 		}
 	}, 1000);
 }
