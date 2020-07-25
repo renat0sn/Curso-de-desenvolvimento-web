@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Mata Mosquito</title>
+
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<script src="js/script.js"></script>
+</head>
+
+<body>
+	
+	<header id="telaInicial">
+		<section id="titulo">
+			<h1>Mata mosquito</h1>
+			<div class="mosca-1">
+				<img src="img/mosca.png" width="200">
+			</div>
+			<div class="mosca-2">
+				<img src="img/mosca.png" width="170">
+			</div>
+			<div class="mosca-3">
+				<img src="img/mosca.png" width="140">
+			</div>
+		</section>
+
+		<section id="usuario">
+			<form class="form-group">
+				<select id="dificuldade" class="form-control">
+					<option value="normal">Normal</option>
+					<option value="dificil">Difícil</option>
+					<option value="muito-dificil">Muito difícil</option>
+				</select>
+			</form>
+			<button onclick="iniciarJogo()" class="btn btn-danger">Jogar</button>
+		</section>
+	</header>
+
+	<section id="jogo">
+		<div class="barraDeVida">
+			<img id="vida-1" src="img/coracao_cheio.png" class="imgVida">
+			<img id="vida-2" src="img/coracao_cheio.png" class="imgVida">
+			<img id="vida-3" src="img/coracao_cheio.png" class="imgVida">
+		</div>
+		<div class="tempo">
+			<h1>Tempo: <span id="segundos">0</span>/100</h1>
+		</div>
+		<div id="mosca-jogo">
+			<img src="img/mosca.png" width="70">
+		</div>
+	</section>
+
+	<section id="vitoria">
+		<img src="img/vitoria.png">
+	</section>
+
+	<section id="derrota">
+		<img src="img/game_over.png">
+	</section>
+</body>
+</html>

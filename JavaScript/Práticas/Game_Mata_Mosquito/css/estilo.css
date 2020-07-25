@@ -1,0 +1,121 @@
+body{
+	background-image: url("../img/bg.jpg");
+	background-size: cover;
+	background-position: top;
+	overflow: hidden;
+}
+
+.borda{
+	border: 2px solid red;
+}
+
+/* Telas */
+#telaInicial{
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height:100vh;
+}
+
+#jogo{
+	display: none;
+	height: 100vh;
+	align-items: flex-end;
+	cursor: url(../img/mata_mosca.png) 40 35, none;
+}
+
+#vitoria{
+	display: none;
+	height: 100vh;
+	justify-content: center;
+}
+
+#derrota{
+	display: none;
+	height: 100vh;
+	justify-content: center;
+}
+/*--------------------------------------------------*/
+
+/* Tipografia */
+@font-face{
+	font-family: Cherl;
+	src: url(../fonte/ChildishFree.otf);
+}
+
+#titulo h1{
+	font-family: Cherl;
+	font-size: 85px;
+	color:#c1e0ce;
+	text-align: center;
+	text-shadow: 0.03em 0.03em black;
+	letter-spacing: 0.06em;
+}
+/*-------------------------------------------------*/
+
+#titulo{
+	width:350px;
+	padding: 50px 0;
+}
+
+.mosca-1{
+	transform: scaleX(-1);
+	width: 0px;
+	height: 0px;
+	position: relative;
+	top: -380px;
+	left: 180px;
+}
+
+.mosca-2{
+	width: 0px;
+	height: 0px;
+	position: relative;
+	top: -100px;
+	left: 300px;
+}
+
+.mosca-3{
+	transform: scaleX(-1);
+	width: 0px;
+	height: 0px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+#usuario{
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+}
+
+.barraDeVida{
+	margin: 0 auto 15px 15px;
+}
+
+.imgVida{
+	width: 40px;
+}
+
+.tempo{
+	margin: 0 15px 15px auto;
+}
+
+.tempo h1{
+	font-family: Cherl;
+	font-size: 45px;
+	color:#262626;
+	text-shadow: 0.03em 0.03em #c1e0ce;
+	letter-spacing: 0.06em;
+	margin: 0;
+	padding: 0;
+}
+
+#mosca-jogo{
+	display: none;
+	position: absolute;
+}
