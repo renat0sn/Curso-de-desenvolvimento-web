@@ -27,7 +27,7 @@ function jogo(dificuldade){
 	}
 
 	var captClick = document.getElementById('mosca-jogo');
-	captClick.addEventListener("click", mataMosquito, false);
+	captClick.addEventListener("mousedown", mataMosquito, false);
 
 	novoMosquito();
 	var loop = function(){
