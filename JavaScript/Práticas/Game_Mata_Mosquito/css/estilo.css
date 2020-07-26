@@ -24,7 +24,7 @@ body{
 	display: none;
 	height: 100vh;
 	align-items: flex-end;
-	cursor: url(../img/mata_mosca.cur) 40 35, url(../img/mata_mosca.png) 40 35, none;
+	cursor: url(../img/mata_mosca.png) 40 35, none;
 	-webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
