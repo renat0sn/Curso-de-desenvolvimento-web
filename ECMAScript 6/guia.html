@@ -1,0 +1,218 @@
+<!-- --> Aula 1 - Var e Let <!--
+	Var -> acessadas em diferentes escopos
+	Let -> disponível apenas dentro do seu próprio escopo (preferível utilizar)
+
+	const -> constante (precisa ser inicializada / não pode ser modificada)
+-->
+
+<!-- --> Aula 2 - Template String <!--
+	Concatenação (utiliza-se crases): 
+	console.log(`Meu nome é ${variavel}.`)
+	console.log(`7 + 7 = ${7+7}`)
+-->
+
+<!-- --> Aula 3 - Parâmetros default <!--
+	São valores padrão para caso não a função chamada não receba nenhum:
+
+	function funcao(x = 5, y = 4){
+		console.log(`parametro 1: ${x}, parametro 2: ${y}`);
+	}
+
+	funcao();
+	ou
+	funcao(undefined, undefined);
+	ou 
+	funcao(1,2);
+-->
+
+<!-- --> Aula 4 - Arrow function <!--
+	Uso da "arrow" '=>', uma outra forma de escrever funções:
+	
+	let quadrado = function(x){
+		return x * x;
+	}
+
+	é a mesma coisa que:
+
+	let quadrado = (x) => {
+		return x * x;
+	}
+
+	que pode ser escrito também assim:
+
+	let quadrado = x => x*x;
+
+	*Obs: semelhante ao lambda em C#
+-->
+
+<!-- --> Aula 5 - Orientação a objeto <!--
+	Nome de classes: letra maiúscula em todas as primeiras letras (ContaBancaria)
+	Nome de atributos: começa com letra minúscula (contaBancaria)
+
+	(Declaração de classe)
+	class ContaBancaria{
+		//Declaração de atributos (pode ser aqui ou dentro do construtor)
+
+		constructor(){
+			this._agencia = ...;
+			this._conta = ...;
+		}
+
+		depositar(){
+			...
+		}
+		sacar(){
+			...
+		}
+
+		get agencia(){
+			return this._agencia;
+		}
+		set agencia(ag){
+			this._agencia = ag;
+		}
+	}
+
+	(Instanciação de classe)
+	let conta = new ContaBancaria();
+
+	(Convenção)
+	Atributos privados -> Variáveis começam com _
+-->
+
+<!-- --> Aula 6 - Herança <!--
+	Herança -> palavra 'extends'
+
+	class Animal{
+		constructor(cor, tamanho){
+			this.cor = ...;
+			this.tamanho = ...;
+		}
+		dormir(){
+			...
+		}
+		comer(){
+			...
+		}
+	}
+
+	class Cachorro extends Animal{
+		constructor(){
+			super('preto', 'grande'); -> necessário ser chamado ao implementar classe herdada, necessariamente antes das declarações dos atributos
+			this.raca = ...;
+		}
+	}
+-->
+
+<!-- --> Aula 7 - Objetos estáticos / literais <!--
+	Semelhante aos 'structs' em C -> atributos separados por vírgula
+	Diferença da classe -> mais rápido e simples de implementar
+
+	let objeto = {
+		descricao: '...',
+		preco: ...,
+		calcular: function(){
+			...
+		}
+	}
+
+	(Melhoria em ES6) -> caso o nome de variável coincida com o nome da chave deste objeto
+
+	let objeto = {
+		descricao,
+		preco,
+		calcular() {
+			...
+		}
+	}
+
+	É possível adicionar um novo atributo dinamicamente:
+	objeto.novoAtributo = ...;
+
+	*Obs:
+	let x = objeto; (valor de objeto é passado por referência ao x -> funciona como um ponteiro)
+-->
+
+<!-- --> Aula 8 - Funções construtoras <!--
+	Outra forma de encapsular dados em uma variável:
+
+	let Carro = function(){
+		this.cor = 'Amarelo';
+		this.modelo = 'Civic';
+		this.velocidadeAtual = 0;
+		let velocidadeMaxima = 180;
+
+		this.acelerar = function() { ... }
+		this.getVelocidadeAtual = function() { ... }
+	}
+
+	let x = new Carro();
+
+	*Obs: diferença para uso de classe -> contextos diferentes e, principalmente, o uso de let torna o atributo privado
+-->
+
+<!-- --> Aula 9 - Prototype <!--
+	Todos os objetos criados no código descendem de 'Object' -> Object.prototype
+
+	Herança de objetos pode ser feita a partir do atributo __proto__ de Object:
+
+	let animal = { x: 'a' }
+	let vertebrado = { __proto__: animal, y: 'b' }
+	let ave = { __proto__: vertebrado, z: 'c'}
+-->
+
+<!-- --> Aula 10 - Rest / Spread <!--
+	Espalhar (spread) ou juntar (rest)
+	Operador: '...'
+
+	(Spread)
+
+	Espalha conteúdo da variável:
+	let string = 'Como utilizar o operador spread';
+	console.log(...string);
+	Saída -> C o m o  u t i l i z a r  o ...
+
+	Outro exemplo (com arrays):
+	let listaCursos1 = ['NodeJS e MongoDB', 'ES6, Typescript e Angular 4']
+	let listaCursos2 = ['Multiplataforma Android/IOS', 'Introdução ao GNU/Linux']
+	let ListaCursosCompleto = ['Web Completo', 'Android Completo', ...listaCursos1, ...listaCursos2]
+	Junta os elementos de listaCursos (1 e 2) e insere em listaCursosCompleto
+
+	(Rest)
+
+	Utilizado em assinatura de funções, e é responsável por juntar todos os parâmetros em forma de array:
+	function soma(...params){
+		...
+	}
+
+	soma(3, 8, 5, 7);
+
+	Parâmetro recebido = [3,8,5,7]
+-->
+
+<!-- --> Aula 11 - Destructuring Assignment <!--
+	Técnica de extração de valores de uma estrutura
+
+	(Arrays) -> []
+	let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão'];
+	let [a, , , b] = frutas;
+	console.log(a, b);
+
+	Variáveis 'a' e 'b' são declaradas na mesma linha, na ordem em que são colocadas (a='Abacaxi', b='Mamão')
+	*Obs: pode ser definidas variáveis default com uma atribuição dentro dos colchetes
+
+	(Objetos) -> {}
+	let produto = {
+		descricao: 'Notebook',
+		preco: 1800,
+		detalhes: {
+			fabricante: 'abc',
+			modelo: 'xyz';
+		}
+	}
+	let {descricao, preco} = produto; (descricao='Notebook', preco=1800)
+	Ou
+	let {descricao: d, preco: p} = produto; (d='Notebook', p=1800) -> Novas variáveis
+	
+	let {detalhes: {fabricante, modelo}} = produto; (fabricante='abc', modelo='xyz')
+-->
