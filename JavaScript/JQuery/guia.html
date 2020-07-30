@@ -1,0 +1,60 @@
+<!-- --> Iniciando JQuery <!--
+	A partir do arquivo min do jQuery ou, preferencialmente, utilizando o CDN disponível no site code.jquery.com :
+	<script src="jquery-3.5.1.min.js"></script>
+	OU
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+	*Obs: Necessário invocar a função $(document).ready(function() { ...código javascript... }) para certificar que todos os elementos estão carregados na página antes de executar o código
+-->
+
+
+<!-- --> Aula 1 - Seletores <!--
+	$(tag)
+	$(.classe)
+	$(#id)
+
+	Exemplo 1: selecionar classe de uma tag específica
+	$('div.exemplo1')
+
+	Exemplo 2: selecionar classe de uma classe específica
+	$('.lista3 .exemplo2')
+
+	Retorno de elementos selecionados:
+	first, last, even (índices pares), odd (índices ímpares)
+	$('div.lista1:first')
+-->
+
+<!-- --> Aula 2 - Manipulando HTML <!--
+	(ATRIBUTOS HTML)
+	$('elemento').attr(atributo, valor) -> atribui um valor ao atributo passado
+	$('elemento').attr(atributo) -> recupera valor do atributo
+
+	(CONTEÚDO INTERNO HTML)
+	$('elemento').html('conteudo-interno') -> permite inserir tags HTML dentro do parâmetro
+	$('elemento').text('conteudo-interno') -> tags HTML não serão processadas nesta função
+
+	(INPUTS E SELECTS)
+	$('id').val() -> recupera valor do input ou select (é possível atribuir novos valores no parâmetro de val())
+	
+	(CHECKBOXES E RADIOS)
+	$('elemento:checked').val() -> radios
+	$.each($('elemento:checked'), (indice, valor) => {
+		console.log(indice, valor.value)
+	}) -> checkbox
+-->
+
+<!-- --> Aula 3 - Inserindo/removendo elementos HTML <!--
+	(DENTRO DA TAG SELECIONADA)
+	prepend -> início
+	append -> fim
+
+	(FORA DA TAG SELECIONADA)
+	before -> antes
+	after -> depois
+
+	Ex.: $('elemento').prepend('conteudo')
+
+	(OUTROS)
+	html -> substitui todo conteúdo interno pelo passado no parâmetro
+	remove -> remove todo conteúdo interno
+-->
