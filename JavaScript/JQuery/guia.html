@@ -58,3 +58,97 @@
 	html -> substitui todo conteúdo interno pelo passado no parâmetro
 	remove -> remove todo conteúdo interno
 -->
+
+<!-- --> Aula 4 - Navegando entre elementos HTML <!--
+	parent() -> seleciona elemento pai mais próximo
+	closest(elemento) -> seleciona elementos pai com elemento passado no parâmetro
+	find(elemento) -> procura por elementos filhos
+-->
+
+<!-- --> Aula 5 - Manipulando CSS <!--
+	(ESTILO)
+	css('estilo', 'valor')
+
+	Ex1: $('#id').css('estilo', 'valor').css(...), ... -> modifica atributo style (inline) da tag
+
+	Pode ser atribuido com objetos literais:
+	Ex2: $('#titulo').css({ 
+		'background': '#155661',
+		'margin': '0px',
+		'padding': '10px 20px 10px 20px'
+	})
+
+	(CLASSE)
+	addClass('nomeDaClasse')
+	hasClass('nomeDaClasse') -> booleano
+	removeClass('nomeDaClasse')
+
+	Ex.: $(elemento).addClass('nomeDaClasse') -> adiciona class ao elemento informado (pode ser uma ou várias)
+-->
+
+<!-- --> Aula 6 - Eventos <!--
+	(NAVEGADOR)
+	$(window).scroll(função()) -> verifica se a janela ativou o scroll 
+	$(window).resize(função()) -> verifica se a janela foi redimensionada
+	*Obs: window pode ser substituído por um elemento HTML
+	*Obs: para utilizar arrow function, deve ser passado parâmetro e (do evento) e referenciar o próprio objeto como e.target
+
+	(MOUSE)
+	click(f) -> clique completo
+	mousedown(f) -> click pressionado
+	mouseup(f) -> click liberado
+
+	Outros eventos: dblclick(), mousemove(), mouseenter(), mouseleave()
+
+	(TECLADO)
+	keydown(f) -> tecla pressionada
+	keyup(f) -> tecla liberada
+
+	(FORMULÁRIOS)
+	focus(f) -> elemento do formulário em foco
+	blur(f) -> elemento do formulário perde o foco
+	change(f) -> elemento do formulário é modificado
+	submit(f) -> elemento do formulário é enviado (utilizar método e.preventDefault() para evitar que a página seja recarregada)
+
+	Obs.: Para aplicar eventos a múltiplos elementos HTML:
+	$('#elemento1, #elemento2, ...')
+
+	(REGISTRANDO/REMOVENDO EVENTOS HTML)
+	on('evento', 'elemento1, elemento2, ...'(opcional), funçao) / off()
+
+	(DISPARANDO EVENTOS)
+	trigger('evento') -> dispara evento de um elemento
+	$('elemento').trigger('evento') -> dentro da função de outro evento
+
+	hover( func1, func2(opcional) ) -> função auxiliar para captura dos eventos mouseenter(), mouseleave()
+
+	toggleClass('nomeDaClasse') -> ativa ou desativa a classe de forma alternada a cada ocorrência do evento
+-->
+
+<!-- --> Aula 7 - Efeitos especiais <!--
+	$(elemento). :
+	show('P') -> exibe elemento HTML
+	hide('P') -> oculta elemento HTML
+	toggle('P') -> alterna estado de exibição de elemento HTML
+	fadeOut('P') -> aplica fade ocultando
+	fadeIn('P') -> aplica fade exibindo
+	fadeToggle('P') -> alterna estado de exibição com fade
+	fadeTo('P', opacidadeFinal(0 - 1) ) -> aplica fade até opacidadeFinal
+	slideUp('P') -> desliza elemento para cima
+	slideDown('P') -> desliza elemento para baixo
+	slideToggle('P') -> alterna deslizamento de acordo com estado atual
+	P: slow, medio, fast, X (valor em ms)
+-->
+
+<!-- --> Aula 8 - Animações <!--
+	$(elemento). :
+	animate(<propriedades visuais>, <opções da transição>) -> apenas para atributos CSS numéricos
+
+	Exemplo:
+		$('button').on('click', () => {
+			$('div').animate({
+				'width': '160px',
+				'height': '160px'
+			}, 2000)
+		})
+-->
